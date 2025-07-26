@@ -1,10 +1,9 @@
-
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import supabase from "../supabase";
-import SignupForm from "../components/SignupForm";
+import SigninForm from "../components/SigninForm";
 
-const Signup = () => {
+export default function LoginPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,14 +21,11 @@ const Signup = () => {
   }, [navigate]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-4 text-center">Create Account</h2>
-        <SignupForm />
-      </div>
+    <div className="w-full h-screen flex justify-center items-center bg-gray-100">
+        <div className=" w-full max-w-md p-6  rounded-md bg-white shadow-md">
+            <h2 className="text-2xl font-bold mb-4 text-center">Login Account</h2>
+            <SigninForm/>
+        </div>
     </div>
   );
-};
-
-export default Signup;
-
+}

@@ -12,7 +12,7 @@ function RequireAuth({ children }) {
       const { data: { session } } = await supabase.auth.getSession();
 
       if (!session) {
-        navigate("/signup"); // 🔁 Redirect if not logged in
+        navigate("/signin"); // 🔁 Redirect if not logged in
       } else {
         setLoading(false); // ✅ Allow access
       }

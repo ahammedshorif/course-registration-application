@@ -1,8 +1,11 @@
 import React from 'react'
+import Appbar from '../components/Appbar'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+       <Appbar></Appbar>
+    </div>
   )
 }
 
